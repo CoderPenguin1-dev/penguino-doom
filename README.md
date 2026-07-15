@@ -4,6 +4,8 @@
     <h3>The second most feathery, cuddly Doom port ever!</h3>
 </div>
 
+## About
+
 Penguino Doom is a fork of Nyan Doom focusing on adding in additional tweaks and nicities.
 
 Penguino and Nyan can be seen as an analog to Nugget Doom and Woof; only adding and (maybe) fixing, but not straying too far from the parent port.
