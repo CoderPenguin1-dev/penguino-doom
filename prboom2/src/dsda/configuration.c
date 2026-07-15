@@ -26,6 +26,7 @@
 #include "hu_obituary.h"
 #include "lprintf.h"
 #include "r_main.h"
+#include "r_sky.h"
 #include "r_segs.h"
 #include "st_stuff.h"
 #include "s_sound.h"
@@ -146,7 +147,6 @@ void dsda_RefreshLinearSky(void);
 void deh_changeCompTranslucency(void);
 void deh_changeBonusFlash(void);
 void deh_changeColoredBlood(void);
-void deh_changeSkymap(void);
 void dsda_InitGameControllerParameters(void);
 void dsda_InitExHud(void);
 void dsda_UpdateFreeText(void);
@@ -158,8 +158,8 @@ void S_ToggleRandomMusic(void);
 void dsda_UpdateTranMap(void);
 void cht_UpdateCheats(void);
 void R_UpdateFuzzSize(void);
+void R_ChangeSkyCM(void);
 void M_RefreshGameSpecificMenuOptions(void);
-void penguino_Invuln_Colormap(void);
 
 void dsda_TrackConfigFeatures(void) {
   if (!demorecording)
@@ -2208,7 +2208,7 @@ dsda_config_t dsda_config[dsda_config_count] = {
   },
   [penguino_config_invuln_cm] = {
     "penguino_config_invuln_cm", penguino_config_invuln_cm,
-    dsda_config_int, 0, 2, { 0 }, NULL, NOT_STRICT, penguino_Invuln_Colormap
+    dsda_config_int, 0, 2, { 0 }, NULL, STRICT_INT(0), penguino_InvulnEffect
   },
   [penguino_config_highlight_peng_features] = {
     "penguino_config_highlight_peng_features", penguino_config_highlight_peng_features,
@@ -2216,11 +2216,10 @@ dsda_config_t dsda_config[dsda_config_count] = {
   }
 };
 
-// Need to figure out a better place for this.
-// For now, it stays here.
-void penguino_Invuln_Colormap(void)
+void penguino_InvulnEffect(void)
 {
-  deh_changeSkymap();
+  R_ChangeSkyCM();
+  // Due to the skymap being baked with OpenGL, it must be reset.
   if (V_IsOpenGLMode())
     M_ChangeVideoMode();
 }

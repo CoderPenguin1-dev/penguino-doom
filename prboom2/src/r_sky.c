@@ -34,6 +34,7 @@
  *
  *-----------------------------------------------------------------------------*/
 
+#include "doomstat.h"
 #include "r_sky.h"
 #include "r_main.h"
 #include "e6y.h"
@@ -126,4 +127,15 @@ void R_InitSkyMap(void)
       skytexturemid = 100*FRACUNIT;
     }
   }
+}
+
+// Called when using the Invuln Effect setting.
+void R_ChangeSkyCM()
+{
+  int invuln_cm = dsda_IntConfig(penguino_config_invuln_cm);
+  if (invuln_cm != 0)
+    comp[comp_skymap] = invuln_cm - 1;
+  else
+    comp[comp_skymap] = compatibility_level >= 11 ? 0 : 1;
+
 }

@@ -30,15 +30,6 @@
 #include "dsda/sfx.h"
 #include "dsda/configuration.h"
 
-void deh_changeSkymap()
-{
-  int invuln_cm = dsda_IntConfig(penguino_config_invuln_cm);
-  if (invuln_cm != 0)
-    comp[comp_skymap] = invuln_cm - 1;
-  else
-    comp[comp_skymap] = compatibility_level >= 11 ? 0 : 1;
-}
-
 void deh_changeCompTranslucency(void)
 {
   extern byte* edited_mobjinfo_bits;
@@ -214,7 +205,6 @@ void deh_applyCompatibility(void)
   }
 
   deh_changeCompTranslucency();
-  deh_changeSkymap();
 }
 
 static dboolean CheckSafeState(statenum_t state)

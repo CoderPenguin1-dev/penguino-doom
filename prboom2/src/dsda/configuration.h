@@ -548,5 +548,6 @@ const char* dsda_StringConfig(dsda_config_identifier_t id);
 char* dsda_ConfigSummary(const char* name);
 int dsda_ConfigIDByName(const char* name);
 dsda_config_type_t dsda_ConfigType(dsda_config_identifier_t id);
+void penguino_InvulnEffect(void);
 
 #endif
