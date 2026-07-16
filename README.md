@@ -5,7 +5,6 @@
 </div>
 
 ## About
-
 Penguino Doom is a fork of Nyan Doom focusing on adding in additional tweaks and nicities.
 
 Penguino and Nyan can be seen as an analog to Nugget Doom and Woof; only adding and (maybe) fixing, but not straying too far from the parent port.
@@ -16,15 +15,16 @@ Penguino and Nyan can be seen as an analog to Nugget Doom and Woof; only adding 
 - `-nocoloredblood` argument to temporarily disable the Colored Blood setting.
 - All Nyan Doom and DSDA-Doom features... and more!
 
+## Patch Notes
+- [v2.0](./patch_notes/v2.0.md)
 
 ## Compiling
-
 Code available at [https://github.com/CoderPenguin1-dev/penguino-doom](https://github.com/CoderPenguin1-dev/penguino-doom/)
 
 Instructions in [guides](./docs/guides/)
 
 ## Credits
-Penguino Doom and its logo are made by CoderPenguin1.
+Penguino Doom and its logos are made by CoderPenguin1.
 
 Penguino Doom is based off [Nyan Doom](https://github.com/andrikpowell/nyan-doom) by Andrik Powell (Arsinikk).
 
