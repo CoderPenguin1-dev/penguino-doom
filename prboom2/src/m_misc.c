@@ -372,6 +372,7 @@ cfg_def_t cfg_defs[] =
   MIGRATED_SETTING(dsda_config_map_things_appearance),
   MIGRATED_SETTING(dsda_config_map_things_hitbox),
   MIGRATED_SETTING(dsda_config_map_things_nice),
+  MIGRATED_SETTING(penguino_config_map_only_important),
 
   SETTING_HEADING("Heads-up display settings"),
   MIGRATED_SETTING(dsda_config_hud_health_red),

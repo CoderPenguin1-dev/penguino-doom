@@ -512,6 +512,7 @@ enum {
   dsda_config_demo_end_quit,
   penguino_config_invuln_cm,
   penguino_config_highlight_peng_features,
+  penguino_config_map_only_important,
   dsda_config_count,
 };
 

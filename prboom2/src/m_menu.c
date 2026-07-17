@@ -4541,6 +4541,7 @@ setup_menu_t auto_options_settings[] =
   { "Show Secrets only after entering", S_YESNO, m_conf, g_all, AU_X, dsda_config_map_secret_after },
   { "Cycle Level Title / Author", S_YESNO | S_NYAN, m_conf, g_all, AU_X, dsda_config_map_title_author_cycle },
   { "Show Keys on Automap", S_YESNO | S_NYAN, m_conf, g_all, AU_X, dsda_config_map_show_keys },
+  { "Only Show Important Things", S_YESNO | S_PENG, m_conf, g_all, AU_X, penguino_config_map_only_important },
   { "Use Automap Hud for Fullscreen", S_YESNO | S_NYAN, m_conf, g_all, AU_X, dsda_config_full_automap_exhud },
   { "Automap Stat Icons", S_YESNO | S_NYAN, m_conf, g_all, AU_X, dsda_config_map_stat_icons },
   EMPTY_LINE,

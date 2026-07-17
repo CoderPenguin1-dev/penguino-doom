@@ -3871,7 +3871,8 @@ static void AM_drawThings(void)
 
       //jff 1/5/98 end added code for keys
       //jff previously entire code
-      AM_drawLineCharacter(lineguy, lineguylines, scale, box_scale, angle, color, p.x, p.y);
+      if (dsda_IntConfig(penguino_config_map_only_important) && color == mapcolor_p->sprt);
+      else AM_drawLineCharacter(lineguy, lineguylines, scale, box_scale, angle, color, p.x, p.y);
       t = t->snext;
     }
    }

@@ -2213,6 +2213,10 @@ dsda_config_t dsda_config[dsda_config_count] = {
   [penguino_config_highlight_peng_features] = {
     "penguino_config_highlight_peng_features", penguino_config_highlight_peng_features,
     CONF_BOOL(0)
+  },
+  [penguino_config_map_only_important] = {
+    "penguino_config_map_only_important", penguino_config_map_only_important,
+    CONF_BOOL(0)
   }
 };
 
